@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe build project",
+            "command": "C:\\msys64\\ucrt64\\bin\\gcc.exe",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\main.c",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\converting.c",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\tokenizing.c",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\fundamentals.c",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\manipulating.c",
+                "-o",
+                "C:\\Users\\Leak\\OneDrive\\College\\Winter 2025\\CPR101\\Version 2\\main.exe"
+            ],
+            "options": {
+                "cwd": "C:\\msys64\\ucrt64\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Builds all source files with full paths."
+        }
+    ]
+}

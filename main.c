@@ -1,10 +1,10 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "manipulating.h"
-#include "tokenizing.h"
-#include "converting.h"
-#include "fundamentals.h"
-
+#include "./manipulating.h"
+#include "./tokenizing.h"
+#include "./converting.h"
+#include "./fundamentals.h"
+#include <stdio.h>
 
 // This function clears the buffer
 void clearBuffer()
@@ -13,12 +13,14 @@ void clearBuffer()
     while (getchar() != '\n');
 }
 
-int main() {
+int main()
+{
     // input from the user
     int choice;
 
     // continue giving the user a choice until they exit the program
-    do {
+    do
+    {
         // display choices
         printf("\nstring manipulation program\n");
         printf("1. string to integer conversion\n");
@@ -33,7 +35,8 @@ int main() {
         clearBuffer();
 
         // perform the action the user wants
-        switch (choice) {
+        switch (choice)
+        {
         case 1:
             converting();
             break;
