@@ -1,8 +1,10 @@
 #include "tokenizing.h"
+#include "common.h"
 
-void tokenizing(void) {
+void tokenizing1(void)
+{
     // Hold the input string
-    char str[MAX_STRING + 1] = { 0 };
+    char str[MAX_STRING + 1] = {0};
     int i;
 
     // Prompt the user for a string
@@ -17,8 +19,8 @@ void tokenizing(void) {
     else
     {
         // Store delimiter, and token
-        char* delim = " ";
-        char* token = strtok(str, delim);
+        char *delim = " ";
+        char *token = strtok(str, delim);
 
         // Print out all of the tokens
         for (i = 0; token != NULL; i++)

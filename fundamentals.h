@@ -7,7 +7,7 @@
 
 #define MAX_STRING 50
 
-void fundamentals();
-
+void fundamentals1(void);
+void fundamentals2(void);
 
 #endif

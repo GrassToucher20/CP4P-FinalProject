@@ -5,58 +5,54 @@
 #include "./converting.h"
 #include "./fundamentals.h"
 #include <stdio.h>
-
-// This function clears the buffer
-void clearBuffer()
-{
-    // Clear the buffer
-    while (getchar() != '\n');
-}
+#include "common.h"
 
 int main()
 {
-    // input from the user
-    int choice;
+    fundamentals2();
 
-    // continue giving the user a choice until they exit the program
-    do
-    {
-        // display choices
-        printf("\nstring manipulation program\n");
-        printf("1. string to integer conversion\n");
-        printf("2. tokenize string\n");
-        printf("3. string length demo\n");
-        printf("4. string concatenation\n");
-        printf("0. exit\n");
-        printf("enter your choice: ");
+    // // input from the user
+    // int choice;
 
-        // read the choice from input
-        scanf("%d", &choice);
-        clearBuffer();
+    // // continue giving the user a choice until they exit the program
+    // do
+    // {
+    //     // display choices
+    //     printf("\nstring manipulation program\n");
+    //     printf("1. string to integer conversion\n");
+    //     printf("2. tokenize string\n");
+    //     printf("3. string length demo\n");
+    //     printf("4. string concatenation\n");
+    //     printf("0. exit\n");
+    //     printf("enter your choice: ");
 
-        // perform the action the user wants
-        switch (choice)
-        {
-        case 1:
-            converting();
-            break;
-        case 2:
-            tokenizing();
-            break;
-        case 3:
-            fundamentals();
-            break;
-        case 4:
-            manipulating();
-            break;
-        case 0:
-            printf("exiting program. goodbye!\n");
-            break;
-        default:
-            printf("invalid choice. please try again.\n");
-            break;
-        }
-    } while (choice != 0);
+    //     // read the choice from input
+    //     scanf("%d", &choice);
+    //     clearBuffer();
 
-    return 0;
+    //     // perform the action the user wants
+    //     switch (choice)
+    //     {
+    //     case 1:
+    //         converting1();
+    //         break;
+    //     case 2:
+    //         tokenizing1();
+    //         break;
+    //     case 3:
+    //         fundamentals1();
+    //         break;
+    //     case 4:
+    //         manipulating1();
+    //         break;
+    //     case 0:
+    //         printf("exiting program. goodbye!\n");
+    //         break;
+    //     default:
+    //         printf("invalid choice. please try again.\n");
+    //         break;
+    //     }
+    // } while (choice != 0);
+
+    // return 0;
 }

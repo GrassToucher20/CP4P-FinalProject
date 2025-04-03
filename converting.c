@@ -1,12 +1,12 @@
 #include "converting.h"
 
-void converting(void)
+void converting1(void)
 {
 	// Variable for the result of the conversion
 	int i = 0;
-	
+
 	// Hold the user input buffer
-	char buffer[9] = { 0 };
+	char buffer[9] = {0};
 
 	// Prompt the user for input
 	printf("Enter a number no longer than %d digits: ", sizeof(buffer) - 1);

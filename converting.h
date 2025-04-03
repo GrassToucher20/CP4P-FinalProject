@@ -5,6 +5,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void converting(void);
+void converting1(void);
 
 #endif

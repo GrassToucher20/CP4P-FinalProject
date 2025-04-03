@@ -7,6 +7,6 @@
 
 #define MAX_STRING 100
 
-void tokenizing(void);
+void tokenizing1(void);
 
 #endif

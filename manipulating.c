@@ -1,12 +1,12 @@
 #include "manipulating.h"
 
-void manipulating(void)
+void manipulating1(void)
 {
 	/* Version 1 */
 	printf("*** Start of Concatenating Strings Demo ***\n");
 
 	// Store the input from the user
-	char input[STR_SIZE + 1] = { 0 };
+	char input[STR_SIZE + 1] = {0};
 	char fmt[12];
 
 	// Prompt the user for string
