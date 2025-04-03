@@ -30,3 +30,28 @@ void tokenizing1(void)
         }
     }
 }
+
+void tokenizing2(void)
+{
+    char input[MAX_STRING] = {0};
+    char *token;
+
+    // Prompt the user
+    printf("Enter a phrase: ");
+    fgets(input, MAX_STRING, stdin);
+
+    // Remove newline character from fgets if present
+    size_t len = strlen(input);
+    if (len > 0 && input[len - 1] == '\n') {
+        input[len - 1] = '\0';
+    }
+    
+    // Tokenize using space as delimiter
+    token = strtok(input, " ");
+
+    printf("Tokens:\n");
+    while (token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL, " ");
+    }
+}

@@ -1,7 +1,5 @@
-#ifndef FUNDAMENTALS_H
-#define FUNDAMENTALS_H
+#pragma once
 
-#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
@@ -9,5 +7,3 @@
 
 void fundamentals1(void);
 void fundamentals2(void);
-
-#endif

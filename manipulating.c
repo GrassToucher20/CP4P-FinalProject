@@ -1,4 +1,5 @@
 #include "manipulating.h"
+#include "common.h"
 
 void manipulating1(void)
 {

@@ -1,7 +1,4 @@
-#ifndef MANIPULATING_H
-#define MANIPULATING_H
-
-#define _CRT_SECURE_NO_WARNINGS
+#pragma once
 
 #include <string.h>
 #include <stdio.h>
@@ -10,5 +7,3 @@
 
 void manipulating1(void);
 void manipulating2(void);
-
-#endif
