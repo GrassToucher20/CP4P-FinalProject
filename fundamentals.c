@@ -36,21 +36,32 @@ void fundamentals1()
 
 void fundamentals2()
 {
-	char buffer[MAX_STRING + 1] = { 0};
+	// Two buffers for user input
+	char buffer1[MAX_STRING + 1] = { 0};
 	char buffer2[MAX_STRING + 1] = { 0 };
 
+	// Prompt the user for the first buffer
 	printf("Enter a string no longer than %d chars long: ", MAX_STRING);
-	scanf("%50[^\n]", buffer);
+	scanf("%50[^\n]", buffer1);
 	clearBuffer();
 
+	// Prompt the usre for the second buffer
 	printf("Enter a string no longer than %d chars long: ", MAX_STRING);
 	scanf("%50[^\n]", buffer2);
 	clearBuffer();
 
-	strcpy(buffer, buffer2);
+	// Check if the string is empty
+	if(buffer1[0] == '\0' || buffer2[0] == '\0')
+	{
+		// Print a message if the string is empty
+		printf("One of the strings is empty. Try again!\n");
+	}
+	else
+	{
+		// Copy the second buffer to the first buffer
+		strcpy(buffer1, buffer2);
 
-	printf("The result is %s\n", buffer);
-
-	
-
+		// Print the first buffer
+		printf("The result is %s\nLength: %d\n", buffer1, strlen(buffer1));
+	}
 }

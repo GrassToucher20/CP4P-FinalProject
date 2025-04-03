@@ -28,3 +28,8 @@ void manipulating1(void)
 
 	printf("*** End of Concatenating Strings Demo ***\n\n");
 }
+
+void manipulating2(void)
+{
+	
+}
