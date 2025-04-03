@@ -7,12 +7,12 @@ void fundamentals1()
 	char fmt[12];
 
 	// Stores the string from the user and the length of the string
-	char str[MAX_STRING + 1] = {0};
+	char str[STRING_MAX + 1] = {0};
 	int length;
 
 	// Prompt the user for a string
-	printf("Enter a string no longer than %d chars long: ", MAX_STRING);
-	sprintf(fmt, "%%%d[^\n]", MAX_STRING);
+	printf("Enter a string no longer than %d chars long: ", STRING_MAX);
+	sprintf(fmt, "%%%d[^\n]", STRING_MAX);
 	scanf(fmt, str);
 
 	// Calculate string length
@@ -37,16 +37,16 @@ void fundamentals1()
 void fundamentals2()
 {
 	// Two buffers for user input
-	char buffer1[MAX_STRING + 1] = { 0};
-	char buffer2[MAX_STRING + 1] = { 0 };
+	char buffer1[STRING_MAX + 1] = { 0};
+	char buffer2[STRING_MAX + 1] = { 0 };
 
 	// Prompt the user for the first buffer
-	printf("Enter a string no longer than %d chars long: ", MAX_STRING);
+	printf("Enter a string no longer than %d chars long: ", STRING_MAX);
 	scanf("%50[^\n]", buffer1);
 	clearBuffer();
 
 	// Prompt the usre for the second buffer
-	printf("Enter a string no longer than %d chars long: ", MAX_STRING);
+	printf("Enter a string no longer than %d chars long: ", STRING_MAX);
 	scanf("%50[^\n]", buffer2);
 	clearBuffer();
 

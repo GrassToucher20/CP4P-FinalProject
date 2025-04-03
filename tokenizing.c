@@ -4,12 +4,12 @@
 void tokenizing1(void)
 {
     // Hold the input string
-    char str[MAX_STRING + 1] = {0};
+    char str[STRING_MAX + 1] = {0};
     int i;
 
     // Prompt the user for a string
     printf("Enter words separated by spaces by spaces: ");
-    scanf("%100[^\n]", str);
+    scanf("%50[^\n]", str);
 
     // If the string is empty, warn the user
     if (strlen(str) == 0)
@@ -33,19 +33,19 @@ void tokenizing1(void)
 
 void tokenizing2(void)
 {
-    char input[MAX_STRING] = {0};
+    char input[STRING_MAX] = {0};
     char *token;
 
     // Prompt the user
     printf("Enter a phrase: ");
-    fgets(input, MAX_STRING, stdin);
+    fgets(input, STRING_MAX, stdin);
 
     // Remove newline character from fgets if present
     size_t len = strlen(input);
     if (len > 0 && input[len - 1] == '\n') {
         input[len - 1] = '\0';
     }
-    
+
     // Tokenize using space as delimiter
     token = strtok(input, " ");
 

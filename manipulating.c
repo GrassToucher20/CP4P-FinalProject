@@ -7,12 +7,12 @@ void manipulating1(void)
 	printf("*** Start of Concatenating Strings Demo ***\n");
 
 	// Store the input from the user
-	char input[STR_SIZE + 1] = {0};
+	char input[STRING_MAX + 1] = {0};
 	char fmt[12];
 
 	// Prompt the user for string
-	printf("Please enter a string no longer than %d chars: ", STR_SIZE - 3);
-	sprintf(fmt, "%%%d[^\n]", STR_SIZE - 4);
+	printf("Please enter a string no longer than %d chars: ", STRING_MAX - 3);
+	sprintf(fmt, "%%%d[^\n]", STRING_MAX - 4);
 	scanf(fmt, input);
 
 	// If the user didn't enter anything, display a message, otherwise concatenate the string
@@ -34,15 +34,15 @@ void manipulating2(void)
 {
 	printf("*** Start of String Comparing Demo ***\n");
 
-	char buf1[STR_SIZE + 1] = {0};
-	char buf2[STR_SIZE + 1] = {0};
+	char buf1[STRING_MAX + 1] = {0};
+	char buf2[STRING_MAX + 1] = {0};
 
-	printf("Please enter a string no longer than %d chars: ", STR_SIZE);
-	scanf("%10[^\n]", buf1);
+	printf("Please enter a string no longer than %d chars: ", STRING_MAX);
+	scanf("%50[^\n]", buf1);
 	clearBuffer();
 
-	printf("Please enter another string no longer than %d chars: ", STR_SIZE);
-	scanf("%10[^\n]", buf2);
+	printf("Please enter another string no longer than %d chars: ", STRING_MAX);
+	scanf("%50[^\n]", buf2);
 	clearBuffer();
 
 	int result = strcmp(buf1, buf2);
