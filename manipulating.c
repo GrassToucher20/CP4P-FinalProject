@@ -31,5 +31,33 @@ void manipulating1(void)
 
 void manipulating2(void)
 {
-	
+	printf("*** Start of String Comparing Demo ***\n");
+
+	char buf1[STR_SIZE + 1] = {0};
+	char buf2[STR_SIZE + 1] = {0};
+
+	printf("Please enter a string no longer than %d chars: ", STR_SIZE);
+	scanf("%10[^\n]", buf1);
+	clearBuffer();
+
+	printf("Please enter another string no longer than %d chars: ", STR_SIZE);
+	scanf("%10[^\n]", buf2);
+	clearBuffer();
+
+	int result = strcmp(buf1, buf2);
+
+	if(result == 0)
+	{
+		printf("The strings are equal.\n");
+	}
+	else if(result < 0)
+	{
+		printf("The first string is less than the second string.\n");
+	}
+	else
+	{
+		printf("The first string is greater than the second string.\n");
+	}
+
+	printf("*** End of String Comparing Demo ***\n\n");
 }
