@@ -33,6 +33,7 @@ void tokenizing1(void)
 
 void tokenizing2(void)
 {
+    // Hold the input string
     char input[STRING_MAX] = {0};
     char *token;
 
@@ -48,7 +49,8 @@ void tokenizing2(void)
 
     // Tokenize using space as delimiter
     token = strtok(input, " ");
-
+    
+    // Print the tokens
     printf("Tokens:\n");
     while (token != NULL) {
         printf("%s\n", token);

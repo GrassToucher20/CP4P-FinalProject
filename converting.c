@@ -44,7 +44,7 @@ void converting2(void)
 	}
 	else
 	{
-		// Convert the string to an int and output the result
+		// Convert the string to an double and output the result
 		i = atof(buffer);
 		printf("The value entered is %lf. Its double is %lf.\n", i, i * 2);
 	}
