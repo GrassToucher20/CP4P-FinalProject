@@ -65,3 +65,30 @@ void fundamentals2()
 		printf("The result is %s\nLength: %d\n", buffer1, strlen(buffer1));
 	}
 }
+
+void fundamentals3(void)
+{
+	// Hold the two buffers, one for user input
+	char buffer1[STRING_MAX + 1] = {0};
+	char buffer2[STRING_MAX + 1] = {0};
+
+	// Prompt and get user input
+	printf("Enter a string no longer than %d chars long: ", STRING_MAX);
+	scanf("%50[^\n]", buffer1);
+	clearBuffer();
+
+	if(buffer1[0] == '\0')
+	{
+		// Print a message if the string is empty
+		printf("The string is empty. Try again!\n");
+	}
+	else
+	{
+		// Copy the first buffer to the second buffer
+		strcpy(buffer2, buffer1);
+
+		// Display the buffer
+		printf("You entered: %s\n", buffer1);
+		printf("Buffer 2 is a copycat: %s\n", buffer2);
+	}
+}

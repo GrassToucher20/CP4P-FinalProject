@@ -6,3 +6,4 @@
 
 void converting1(void);
 void converting2(void);
+void converting3(void);

@@ -57,3 +57,33 @@ void tokenizing2(void)
         token = strtok(NULL, " ");
     }
 }
+
+void tokenizing3(void)
+{
+    // Holds user input string and token variable
+    char input[STRING_MAX];
+    char *token;
+
+    // Ask the user for a sentence
+    printf("Enter a sentence: ");
+    fgets(input, STRING_MAX, stdin);
+
+    // Remove newline from fgets
+    size_t len = strlen(input);
+    if (len > 0 && input[len - 1] == '\n') {
+        input[len - 1] = '\0';
+    }
+
+    // Tokenize using common sentence delimiters
+    const char *delimiters = " ,.!?;:\"()\n\t";
+
+    // Get the first token
+    token = strtok(input, delimiters);
+
+    // Print out the tokens
+    printf("Tokens (words):\n");
+    while (token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL, delimiters);
+    }
+}

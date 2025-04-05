@@ -62,3 +62,37 @@ void manipulating2(void)
 
 	printf("*** End of String Comparing Demo ***\n\n");
 }
+
+void manipulating3(void)
+{
+	char buffer[STRING_MAX + 1] = {0};
+	char substringBuffer[STRING_MAX + 1] = {0};
+	char* subStr = NULL;
+
+	printf("Enter a string no longer than %d chars: ", STRING_MAX);
+	scanf("%50[^\n]", buffer);
+	clearBuffer();
+
+	printf("Enter a substring to search for: ");
+	scanf("%50[^\n]", substringBuffer);
+	clearBuffer();
+
+	if(buffer[0] == '\0' || substringBuffer[0] == '\0')
+	{
+		printf("One of the strings is empty.\n");
+	}
+	else
+	{
+		subStr = strstr(buffer, substringBuffer);
+
+		if(!subStr)
+		{
+			printf("No substring was found.\n");
+		}
+		else
+		{
+			printf("The substring was found at index %ld.\n", subStr - buffer);
+			printf("The substring is: %s\n", subStr);
+		}
+	}
+}

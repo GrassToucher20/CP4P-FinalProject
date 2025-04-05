@@ -5,3 +5,4 @@
 
 void manipulating1(void);
 void manipulating2(void);
+void manipulating3(void);
